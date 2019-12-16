@@ -1,7 +1,0 @@
-####Comandos postwork 1
-
-nano carpetas.sh
-
-#####Creación de carpetas con script carpetas.sh
-
-bash carpetas.sh
