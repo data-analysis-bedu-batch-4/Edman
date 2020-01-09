@@ -1,0 +1,18 @@
+video_id,trending_date,title,channel_title,category_id,publish_time,tags,views,likes,dislikes,comment_count,thumbnail_link,comments_disabled,ratings_disabled,video_error_or_removed,description
+
+
+
+#####comandos post work 3 
+
+id,acousticness,danceability,duration_ms,energy,instrumentalness,key,liveness,loudness,mode,speechiness,tempo,time_signature,valence,target,song_title,artist,
+
+CREATE TABLE spotify_2017 (id INT PRIMARY KEY, acousticness FLOAT, danceability FLOAT, duration_ms INT, energy FLOAT, instrumentalness FLOAT, key_ INT, liveness FLOAT, loudness FLOAT, mode INT, speachiness FLOAT, tempo FLOAT, time_siganture INT, valence FLOAT, target INT, song_title VARCHAR(200), artist VARCHAR(100));
+
+
+cd Documents
+cd Datos/
+mycli -h mariohd.com -u root -p 3u6PmI9sFYQVbL86 -P 3306 --local-infile true
+CREATE TABLE spotify_2017 (id INT PRIMARY KEY, acousticness FLOAT, danceability FLOAT, duration_ms INT, energy FLOAT, instrumentalness FLOAT, key_ INT, liveness FLOAT, 
+                                    loudness FLOAT, mode INT, speachiness FLOAT, tempo FLOAT, time_siganture INT, valence FLOAT, target INT, song_title VARCHAR(200), artist VARCHAR(100));
+LOAD DATA LOCAL INFILE "spotify_2017.csv" INTO TABLE spotify_2017 FIELDS TERMINATED BY ",";   
+SELECT * FROM spotify_2017 LIMIT 10;     
